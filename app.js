@@ -8,7 +8,7 @@ const port = 3000
 app.use(metricsMiddleware);
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('I\'m generating Prometheus metrics!')
 })
 
 app.listen(port, '0.0.0.0', () => {
