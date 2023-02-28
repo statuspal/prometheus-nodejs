@@ -4,7 +4,7 @@
 
 Run `npm install` and `npm start` to start the Prometheus-enabled Node.js server.
 
-Visit http://localhost:3000 and then http://localhost:3000/metrics to verify is working.
+Visit http://localhost:3009 and then http://localhost:3009/metrics to verify is working.
 
 
 ### Start Prometheus server
@@ -12,7 +12,7 @@ Visit http://localhost:3000 and then http://localhost:3000/metrics to verify is 
 Run the following command:
 
 ```bash
-docker run -p 9090:9090 -v "$(pwd)/prometheus.yml":/etc/prometheus/prometheus.yml prom/prometheus
+docker run -p 9090:9090 -v "$(pwd)/prometheus":/etc/prometheus prom/prometheus
 ```
 
 Now visit http://localhost:9090/ to see your Prometheus server running.

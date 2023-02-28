@@ -1,0 +1,10 @@
+groups:
+  - name: nodejs
+    rules:
+    - alert: NodejsHighErrorRate
+      expr: http_request_duration_seconds_count{job="nodejs",status_code="500"} / http_request_duration_seconds_count{job="nodejs"} > 0.3
+      for: 1m
+      labels:
+        severity: warning
+      annotations:
+        summary: "High error rate on Node.js server"
